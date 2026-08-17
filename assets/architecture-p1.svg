@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 500" width="1280" height="500" role="img" aria-label="Architecture of cloud-native-text-engine. React 19 frontend calls a FastAPI backend with JWT auth. The backend uploads documents to AWS S3 and enqueues jobs on AWS SQS. A Python worker polls the queue, extracts text with PyPDF2, runs sentiment analysis, BART-large-CNN summarisation and MiniLM embeddings, then writes results to DynamoDB. An Ollama container serves a local LLM to the backend. All four services run under Docker Compose in AWS region ap-south-1.">
   <title>cloud-native-text-engine — data flow</title>
 

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 388" width="1280" height="388" role="img" aria-label="Reported metrics for the CNN-LSTM-Attention emotion recognition model: accuracy 70 percent, precision 0.68, recall 0.70, F1 score 0.69. Training configuration: Adam optimiser at learning rate 0.001, 30 epochs, batch size 32, TensorFlow and Keras, 7 emotion classes, 48 by 48 greyscale input.">
   <title>metrics --source README</title>
 

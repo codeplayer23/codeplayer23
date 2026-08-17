@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 578" width="1280" height="578" role="img" aria-label="Engineering stack terminal output. Power unit: PyTorch, TensorFlow, Keras, Hugging Face Transformers, sentence-transformers. Aerodynamics: ViT, RoBERTa, DistilBERT, BART, CNN-LSTM-Attention, cGAN. Data systems: scikit-learn, XGBoost, CatBoost, SHAP, LIME, pandas, NumPy, NLTK, OpenCV, MediaPipe. Chassis: FastAPI, Uvicorn, Node.js, Express, MongoDB, Mongoose, JWT, bcrypt. Garage: AWS S3, DynamoDB, SQS, Docker, Docker Compose, Ollama. Cockpit: React, Vite, TailwindCSS, Recharts, Chart.js.">
   <title>stack --list-subsystems</title>
 

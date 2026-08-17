@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 306" width="1280" height="306" role="img" aria-label="Sector 1, language distribution measured across 19 public repositories totalling 223,582 bytes of source: Python 54.7 percent, HTML 15.3 percent, JavaScript 15.1 percent, Jupyter Notebook 9.4 percent, PHP 3.8 percent, CSS 1.6 percent, Dockerfile 0.2 percent.">
+  <title>lang --bytes --all-repos</title>
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .lbl  { letter-spacing: 2px; }
+      .lg   { font-size: 13px; fill: #F5F5F7; }
+      .pc   { font-size: 13px; fill: #8A8F98; font-weight: 700; }
+
+      @keyframes blink { 0%, 48% { opacity: 1 } 49%, 100% { opacity: 0 } }
+      @keyframes head  { 0% { transform: translateX(0) } 100% { transform: translateX(1200px) } }
+      .cur  { animation: blink 1.05s steps(1) infinite; }
+      .head { animation: head 5.5s linear infinite; }
+      @media (prefers-reduced-motion: reduce) { .cur, .head { animation: none } .head { opacity: 0 } }
+    </style>
+    <pattern id="gl" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0V32M0 32H32" fill="none" stroke="#26282E" stroke-width=".6" opacity=".4"/>
+    </pattern>
+    <clipPath id="cl"><rect x="8" y="8" width="1264" height="290" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="1280" height="306" fill="#0A0A0B"/>
+  <g clip-path="url(#cl)">
+    <rect x="8" y="8" width="1264" height="290" fill="url(#gl)"/>
+    <rect x="8" y="8" width="1264" height="44" fill="#121316"/>
+    <line x1="8" y1="52" x2="1272" y2="52" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="8" y="8" width="4" height="44" fill="#E10600"/>
+    <text class="mono lbl" x="30" y="36" font-size="14" fill="#F5F5F7">SECTOR 1 · LANGUAGE DISTRIBUTION</text>
+    <text class="mono lbl" x="1244" y="35" font-size="12" fill="#8A8F98" text-anchor="end">223,582 B · 19 REPOS</text>
+  </g>
+  <rect x="8" y="8" width="1264" height="290" rx="10" fill="none" stroke="#26282E" stroke-width="1.5"/>
+
+  <text class="mono" x="30" y="88" font-size="16" fill="#E10600">&gt;<tspan fill="#F5F5F7" dx="10">lang --bytes --all-repos</tspan><tspan class="cur" fill="#F5F5F7" dx="6">█</tspan></text>
+
+  <!-- stacked distribution bar -->
+  <g>
+    <rect x="40"   y="124" width="656" height="26" fill="#E10600"/>
+    <rect x="696"  y="124" width="183" height="26" fill="#FF8700"/>
+    <rect x="879"  y="124" width="181" height="26" fill="#FFD100"/>
+    <rect x="1060" y="124" width="113" height="26" fill="#8A8F98"/>
+    <rect x="1173" y="124" width="46"  height="26" fill="#5A5F68"/>
+    <rect x="1219" y="124" width="19"  height="26" fill="#3A3D44"/>
+    <rect x="1238" y="124" width="2"   height="26" fill="#26282E"/>
+    <rect x="40" y="124" width="1200" height="26" fill="none" stroke="#26282E" stroke-width="1"/>
+  </g>
+  <line class="head" x1="40" y1="116" x2="40" y2="158" stroke="#F5F5F7" stroke-width="1.5" opacity=".55"/>
+
+  <!-- scale -->
+  <g stroke="#26282E" stroke-width="1">
+    <line x1="40" y1="162" x2="1240" y2="162"/>
+    <line x1="40"   y1="162" x2="40"   y2="168"/>
+    <line x1="340"  y1="162" x2="340"  y2="168"/>
+    <line x1="640"  y1="162" x2="640"  y2="168"/>
+    <line x1="940"  y1="162" x2="940"  y2="168"/>
+    <line x1="1240" y1="162" x2="1240" y2="168"/>
+  </g>
+  <g class="mono" font-size="10" fill="#8A8F98" text-anchor="middle">
+    <text x="40"   y="182">0%</text>
+    <text x="340"  y="182">25%</text>
+    <text x="640"  y="182">50%</text>
+    <text x="940"  y="182">75%</text>
+    <text x="1240" y="182">100%</text>
+  </g>
+
+  <!-- legend -->
+  <g class="mono">
+    <rect x="40" y="207" width="11" height="11" fill="#E10600"/>
+    <text class="lg" x="60" y="217">Python</text>
+    <text class="pc" x="290" y="217" text-anchor="end">54.7%</text>
+
+    <rect x="340" y="207" width="11" height="11" fill="#FF8700"/>
+    <text class="lg" x="360" y="217">HTML</text>
+    <text class="pc" x="590" y="217" text-anchor="end">15.3%</text>
+
+    <rect x="640" y="207" width="11" height="11" fill="#FFD100"/>
+    <text class="lg" x="660" y="217">JavaScript</text>
+    <text class="pc" x="890" y="217" text-anchor="end">15.1%</text>
+
+    <rect x="940" y="207" width="11" height="11" fill="#8A8F98"/>
+    <text class="lg" x="960" y="217">Jupyter Notebook</text>
+    <text class="pc" x="1240" y="217" text-anchor="end">9.4%</text>
+
+    <rect x="40" y="243" width="11" height="11" fill="#5A5F68"/>
+    <text class="lg" x="60" y="253">PHP</text>
+    <text class="pc" x="290" y="253" text-anchor="end">3.8%</text>
+
+    <rect x="340" y="243" width="11" height="11" fill="#3A3D44"/>
+    <text class="lg" x="360" y="253">CSS</text>
+    <text class="pc" x="590" y="253" text-anchor="end">1.6%</text>
+
+    <rect x="640" y="243" width="11" height="11" fill="#26282E" stroke="#3A3D44" stroke-width="1"/>
+    <text class="lg" x="660" y="253">Dockerfile</text>
+    <text class="pc" x="890" y="253" text-anchor="end">0.2%</text>
+  </g>
+
+  <line x1="30" y1="274" x2="1250" y2="274" stroke="#26282E" stroke-width="1.5"/>
+  <text class="mono lbl" x="30" y="294" font-size="11" fill="#8A8F98">MEASURED FROM SOURCE FILES · 2026.08.17 · EXCLUDES DATA, LOCKFILES AND VENDORED CODE</text>
+</svg>

@@ -1,0 +1,6 @@
+# Profile artwork is hand-authored but should not drive repository language stats.
+assets/*.svg linguist-vendored
+
+# Keep SVG diffs readable and line endings stable across platforms.
+*.svg text eol=lf diff
+*.md  text eol=lf

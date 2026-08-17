@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 364" width="1280" height="364" role="img" aria-label="Telemetry panel. Public repositories 20. Account since 8 December 2023. Primary language Python. Discipline AI, ML and deep learning. Session status building. Repository classification: applied ML and DL 5, full stack 2, test sessions 12, infrastructure 1.">
+  <title>telemetry --verbose</title>
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .lbl  { letter-spacing: 2px; }
+
+      @keyframes blink { 0%, 48% { opacity: 1 } 49%, 100% { opacity: 0 } }
+      @keyframes led   { 0%, 100% { opacity: 1 } 50% { opacity: .2 } }
+      @keyframes f1 { 0% { stroke-dashoffset: 125 } 55%, 100% { stroke-dashoffset: 0 } }
+      @keyframes f2 { 0% { stroke-dashoffset: 50 }  55%, 100% { stroke-dashoffset: 0 } }
+      @keyframes f3 { 0% { stroke-dashoffset: 300 } 55%, 100% { stroke-dashoffset: 0 } }
+      @keyframes f4 { 0% { stroke-dashoffset: 25 }  55%, 100% { stroke-dashoffset: 0 } }
+
+      .cur { animation: blink 1.05s steps(1) infinite; }
+      .led { animation: led 1.9s ease-in-out infinite; }
+      .b1 { stroke-dasharray: 125; animation: f1 4s ease-out infinite; }
+      .b2 { stroke-dasharray: 50;  animation: f2 4s ease-out infinite .15s; }
+      .b3 { stroke-dasharray: 300; animation: f3 4s ease-out infinite .3s; }
+      .b4 { stroke-dasharray: 25;  animation: f4 4s ease-out infinite .45s; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cur, .led { animation: none }
+        .b1, .b2, .b3, .b4 { animation: none; stroke-dashoffset: 0 }
+      }
+    </style>
+    <pattern id="g2" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0V32M0 32H32" fill="none" stroke="#26282E" stroke-width=".6" opacity=".5"/>
+    </pattern>
+    <clipPath id="c2"><rect x="8" y="8" width="1264" height="348" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="1280" height="364" fill="#0A0A0B"/>
+  <g clip-path="url(#c2)">
+    <rect x="8" y="8" width="1264" height="348" fill="url(#g2)"/>
+    <rect x="8" y="8" width="1264" height="44" fill="#121316"/>
+    <line x1="8" y1="52" x2="1272" y2="52" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="8" y="8" width="4" height="44" fill="#E10600"/>
+    <text class="mono lbl" x="30" y="36" font-size="14" fill="#F5F5F7">02 · TELEMETRY</text>
+    <circle class="led" cx="1082" cy="30" r="4.5" fill="#E10600"/>
+    <text class="mono lbl" x="1244" y="35" font-size="12" fill="#8A8F98" text-anchor="end">VERIFIED FEED</text>
+  </g>
+  <rect x="8" y="8" width="1264" height="348" rx="10" fill="none" stroke="#26282E" stroke-width="1.5"/>
+
+  <text class="mono" x="30" y="86" font-size="16" fill="#E10600">&gt;<tspan fill="#F5F5F7" dx="10">telemetry --verbose</tspan><tspan class="cur" fill="#F5F5F7" dx="6">█</tspan></text>
+
+  <!-- left: verified key/value readout -->
+  <g class="mono lbl" font-size="12" fill="#8A8F98">
+    <text x="30" y="132">PUBLIC REPOSITORIES</text>
+    <text x="30" y="168">ACCOUNT SINCE</text>
+    <text x="30" y="204">PRIMARY LANGUAGE</text>
+    <text x="30" y="240">DISCIPLINE</text>
+    <text x="30" y="276">SESSION STATUS</text>
+  </g>
+  <g class="mono" font-size="17" font-weight="700" fill="#F5F5F7">
+    <text x="300" y="132">20</text>
+    <text x="300" y="168">2023.12.08</text>
+    <text x="300" y="204">PYTHON</text>
+    <text x="300" y="240">AI / ML · DEEP LEARNING</text>
+    <text x="300" y="276" fill="#FF8700">BUILDING</text>
+  </g>
+  <g stroke="#26282E" stroke-width="1">
+    <line x1="30" y1="146" x2="620" y2="146"/>
+    <line x1="30" y1="182" x2="620" y2="182"/>
+    <line x1="30" y1="218" x2="620" y2="218"/>
+    <line x1="30" y1="254" x2="620" y2="254"/>
+  </g>
+
+  <line x1="660" y1="104" x2="660" y2="300" stroke="#26282E" stroke-width="1.5"/>
+
+  <!-- right: repository classification -->
+  <text class="mono lbl" x="700" y="132" font-size="12" fill="#8A8F98">REPOSITORY CLASSIFICATION</text>
+
+  <g class="mono" font-size="13" fill="#F5F5F7">
+    <text x="700" y="173">APPLIED ML / DL</text>
+    <text x="700" y="209">FULL STACK</text>
+    <text x="700" y="245">TEST SESSIONS</text>
+    <text x="700" y="281">INFRASTRUCTURE</text>
+  </g>
+
+  <g stroke-width="9">
+    <line x1="880" y1="168" x2="1005" y2="168" stroke="#26282E"/>
+    <line class="b1" x1="880" y1="168" x2="1005" y2="168" stroke="#E10600"/>
+    <line x1="880" y1="204" x2="930"  y2="204" stroke="#26282E"/>
+    <line class="b2" x1="880" y1="204" x2="930"  y2="204" stroke="#E10600"/>
+    <line x1="880" y1="240" x2="1180" y2="240" stroke="#26282E"/>
+    <line class="b3" x1="880" y1="240" x2="1180" y2="240" stroke="#8A8F98"/>
+    <line x1="880" y1="276" x2="905"  y2="276" stroke="#26282E"/>
+    <line class="b4" x1="880" y1="276" x2="905"  y2="276" stroke="#FF8700"/>
+  </g>
+
+  <g class="mono" font-size="14" font-weight="700" fill="#F5F5F7" text-anchor="end">
+    <text x="1244" y="173">5</text>
+    <text x="1244" y="209">2</text>
+    <text x="1244" y="245">12</text>
+    <text x="1244" y="281">1</text>
+  </g>
+
+  <line x1="30" y1="322" x2="1250" y2="322" stroke="#26282E" stroke-width="1.5"/>
+  <text class="mono lbl" x="30" y="346" font-size="11" fill="#8A8F98">SUM 20 ENTRIES · SOURCE github.com/codeplayer23 · NO SYNTHETIC VALUES</text>
+</svg>

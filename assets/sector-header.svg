@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 148" width="1280" height="148" role="img" aria-label="Sector timing header. Sector 1: language distribution, measured from source. Sector 2: contribution streak, live. Sector 3: commit activity trace, live.">
+  <title>github_activity --sectors</title>
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .lbl  { letter-spacing: 2px; }
+      .sn   { font-size: 26px; font-weight: 700; fill: #F5F5F7; letter-spacing: 2px; }
+      .sd   { font-size: 12px; fill: #8A8F98; letter-spacing: 1.5px; }
+
+      @keyframes blink { 0%, 48% { opacity: 1 } 49%, 100% { opacity: 0 } }
+      @keyframes run   { 0% { stroke-dashoffset: 340 } 70%, 100% { stroke-dashoffset: 0 } }
+      .cur { animation: blink 1.05s steps(1) infinite; }
+      .s   { stroke-dasharray: 340; animation: run 3.6s ease-out infinite; }
+      .s2  { animation-delay: .3s } .s3 { animation-delay: .6s }
+      @media (prefers-reduced-motion: reduce) {
+        .cur { animation: none }
+        .s { animation: none; stroke-dashoffset: 0 }
+      }
+    </style>
+    <pattern id="ga" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0V32M0 32H32" fill="none" stroke="#26282E" stroke-width=".6" opacity=".4"/>
+    </pattern>
+    <clipPath id="ca"><rect x="8" y="8" width="1264" height="132" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="1280" height="148" fill="#0A0A0B"/>
+  <g clip-path="url(#ca)">
+    <rect x="8" y="8" width="1264" height="132" fill="url(#ga)"/>
+    <rect x="8" y="8" width="1264" height="44" fill="#121316"/>
+    <line x1="8" y1="52" x2="1272" y2="52" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="8" y="8" width="4" height="44" fill="#E10600"/>
+    <text class="mono lbl" x="30" y="36" font-size="14" fill="#F5F5F7">05 · GITHUB TELEMETRY</text>
+    <text class="mono lbl" x="1244" y="35" font-size="12" fill="#8A8F98" text-anchor="end">LIVE · GITHUB API</text>
+  </g>
+  <rect x="8" y="8" width="1264" height="132" rx="10" fill="none" stroke="#26282E" stroke-width="1.5"/>
+
+  <g class="mono">
+    <text class="sn" x="40"  y="96">SECTOR 1</text>
+    <text class="sd" x="40"  y="120">LANGUAGE DISTRIBUTION · MEASURED</text>
+    <line class="s"    x1="40"  y1="76" x2="380"  y2="76" stroke="#E10600" stroke-width="4"/>
+
+    <text class="sn" x="450" y="96">SECTOR 2</text>
+    <text class="sd" x="450" y="120">CONTRIBUTION STREAK · LIVE</text>
+    <line class="s s2" x1="450" y1="76" x2="790"  y2="76" stroke="#FF8700" stroke-width="4"/>
+
+    <text class="sn" x="860" y="96">SECTOR 3</text>
+    <text class="sd" x="860" y="120">COMMIT ACTIVITY TRACE · LIVE</text>
+    <line class="s s3" x1="860" y1="76" x2="1200" y2="76" stroke="#FFD100" stroke-width="4"/>
+  </g>
+</svg>

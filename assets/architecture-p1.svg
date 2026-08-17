@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 500" width="1280" height="500" role="img" aria-label="Architecture of cloud-native-text-engine. React 19 frontend calls a FastAPI backend with JWT auth. The backend uploads documents to AWS S3 and enqueues jobs on AWS SQS. A Python worker polls the queue, extracts text with PyPDF2, runs sentiment analysis, BART-large-CNN summarisation and MiniLM embeddings, then writes results to DynamoDB. An Ollama container serves a local LLM to the backend. All four services run under Docker Compose in AWS region ap-south-1.">
+  <title>cloud-native-text-engine — data flow</title>
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .lbl  { letter-spacing: 2px; }
+      .bt   { font-size: 13px; font-weight: 700; fill: #F5F5F7; letter-spacing: 1.5px; }
+      .bs   { font-size: 11px; fill: #8A8F98; }
+      .fl   { font-size: 10px; fill: #8A8F98; letter-spacing: 1px; }
+
+      @keyframes flow { 0% { stroke-dashoffset: 36 } 100% { stroke-dashoffset: 0 } }
+      .pipe { stroke-dasharray: 6 6; animation: flow 1.4s linear infinite; }
+      @keyframes led { 0%, 100% { opacity: 1 } 50% { opacity: .2 } }
+      .led { animation: led 1.9s ease-in-out infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        .pipe { animation: none; stroke-dasharray: 6 6 }
+        .led { animation: none }
+      }
+    </style>
+    <pattern id="g5" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0V32M0 32H32" fill="none" stroke="#26282E" stroke-width=".6" opacity=".4"/>
+    </pattern>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#E10600"/>
+    </marker>
+    <clipPath id="c5"><rect x="8" y="8" width="1264" height="484" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="1280" height="500" fill="#0A0A0B"/>
+  <g clip-path="url(#c5)">
+    <rect x="8" y="8" width="1264" height="484" fill="url(#g5)"/>
+    <rect x="8" y="8" width="1264" height="44" fill="#121316"/>
+    <line x1="8" y1="52" x2="1272" y2="52" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="8" y="8" width="4" height="44" fill="#E10600"/>
+    <text class="mono lbl" x="30" y="36" font-size="14" fill="#F5F5F7">P1 · CLOUD-NATIVE-TEXT-ENGINE</text>
+    <circle class="led" cx="1060" cy="30" r="4.5" fill="#E10600"/>
+    <text class="mono lbl" x="1244" y="35" font-size="12" fill="#8A8F98" text-anchor="end">AWS ap-south-1</text>
+  </g>
+  <rect x="8" y="8" width="1264" height="484" rx="10" fill="none" stroke="#26282E" stroke-width="1.5"/>
+
+  <!-- docker compose boundary -->
+  <rect x="26" y="112" width="1228" height="330" rx="6" fill="none" stroke="#26282E" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text class="mono lbl" x="34" y="106" font-size="11" fill="#8A8F98">docker-compose · 4 services</text>
+
+  <!-- ROW 1 BOXES -->
+  <g>
+    <rect x="40"   y="150" width="200" height="106" rx="4" fill="#121316" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="40"   y="150" width="200" height="3" fill="#E10600"/>
+    <text class="mono bt" x="56" y="180">COCKPIT</text>
+    <text class="mono bs" x="56" y="204">React 19 · Vite</text>
+    <text class="mono bs" x="56" y="221">TailwindCSS</text>
+    <text class="mono bs" x="56" y="238">Recharts · Axios</text>
+
+    <rect x="290"  y="150" width="200" height="106" rx="4" fill="#121316" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="290"  y="150" width="200" height="3" fill="#E10600"/>
+    <text class="mono bt" x="306" y="180">API</text>
+    <text class="mono bs" x="306" y="204">FastAPI · Uvicorn</text>
+    <text class="mono bs" x="306" y="221">JWT · bcrypt</text>
+    <text class="mono bs" x="306" y="238">python-jose</text>
+
+    <rect x="540"  y="150" width="200" height="106" rx="4" fill="#121316" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="540"  y="150" width="200" height="3" fill="#FF8700"/>
+    <text class="mono bt" x="556" y="180">OBJECT STORE</text>
+    <text class="mono bs" x="556" y="204">AWS S3</text>
+    <text class="mono bs" x="556" y="221">document upload</text>
+
+    <rect x="790"  y="150" width="200" height="106" rx="4" fill="#121316" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="790"  y="150" width="200" height="3" fill="#FF8700"/>
+    <text class="mono bt" x="806" y="180">QUEUE</text>
+    <text class="mono bs" x="806" y="204">AWS SQS</text>
+    <text class="mono bs" x="806" y="221">text-processing</text>
+
+    <rect x="1040" y="150" width="200" height="106" rx="4" fill="#121316" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="1040" y="150" width="200" height="3" fill="#E10600"/>
+    <text class="mono bt" x="1056" y="176">WORKER</text>
+    <text class="mono bs" x="1056" y="198">PyPDF2 extract</text>
+    <text class="mono bs" x="1056" y="214">sentiment</text>
+    <text class="mono bs" x="1056" y="230">BART summarise</text>
+    <text class="mono bs" x="1056" y="246">MiniLM embed</text>
+  </g>
+
+  <!-- ROW 2 BOXES -->
+  <g>
+    <rect x="290" y="340" width="200" height="80" rx="4" fill="#121316" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="290" y="340" width="200" height="3" fill="#FFD100"/>
+    <text class="mono bt" x="306" y="370">LLM RUNTIME</text>
+    <text class="mono bs" x="306" y="394">Ollama container</text>
+
+    <rect x="940" y="340" width="300" height="80" rx="4" fill="#121316" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="940" y="340" width="300" height="3" fill="#FF8700"/>
+    <text class="mono bt" x="956" y="370">DATA STORE</text>
+    <text class="mono bs" x="956" y="394">DynamoDB · DocumentInsights + users</text>
+  </g>
+
+  <!-- FLOW: row 1 -->
+  <g fill="none" stroke="#E10600" stroke-width="2" marker-end="url(#ah)">
+    <line class="pipe" x1="240" y1="210" x2="286" y2="210"/>
+    <line class="pipe" x1="490" y1="210" x2="536" y2="210"/>
+    <line class="pipe" x1="740" y1="210" x2="786" y2="210"/>
+    <line class="pipe" x1="990" y1="210" x2="1036" y2="210"/>
+  </g>
+  <g class="mono fl" text-anchor="middle">
+    <text x="263"  y="200">https</text>
+    <text x="513"  y="200">put</text>
+    <text x="763"  y="200">event</text>
+    <text x="1013" y="200">poll</text>
+  </g>
+
+  <!-- FLOW: backend <-> ollama -->
+  <line class="pipe" x1="390" y1="256" x2="390" y2="336" fill="none" stroke="#FFD100" stroke-width="2" marker-end="url(#ah)"/>
+  <text class="mono fl" x="400" y="328">generate</text>
+
+  <!-- FLOW: worker -> dynamodb -->
+  <line class="pipe" x1="1140" y1="256" x2="1140" y2="336" fill="none" stroke="#E10600" stroke-width="2" marker-end="url(#ah)"/>
+  <text class="mono fl" x="1150" y="300">write insights</text>
+
+  <!-- FLOW: api -> dynamodb query -->
+  <path class="pipe" d="M450 256 V300 H990 V336" fill="none" stroke="#8A8F98" stroke-width="2" marker-end="url(#ah)"/>
+  <text class="mono fl" x="700" y="292" text-anchor="middle">query insights</text>
+
+  <line x1="30" y1="458" x2="1250" y2="458" stroke="#26282E" stroke-width="1.5"/>
+  <text class="mono lbl" x="30" y="480" font-size="11" fill="#8A8F98">ASYNC PIPELINE · QUEUE-DECOUPLED INFERENCE · CONTAINERISED SERVICES</text>
+</svg>

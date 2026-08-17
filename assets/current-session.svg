@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 468" width="1280" height="468" role="img" aria-label="Current session status. In development: distributed AI systems, cloud-native processing, computer vision, transformer architectures. Under evaluation: model explainability, local LLM inference. Development means actively building; evaluation means exploring, not claimed as expertise.">
+  <title>current_session --status</title>
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .lbl  { letter-spacing: 2px; }
+      .area { font-size: 15px; fill: #F5F5F7; }
+      .basis{ font-size: 12px; fill: #8A8F98; }
+      .chip { font-size: 11px; letter-spacing: 1.5px; font-weight: 700; }
+
+      @keyframes blink { 0%, 48% { opacity: 1 } 49%, 100% { opacity: 0 } }
+      @keyframes led   { 0%, 100% { opacity: 1 } 50% { opacity: .22 } }
+      .cur { animation: blink 1.05s steps(1) infinite; }
+      .dev { animation: led 2.1s ease-in-out infinite; }
+      .evl { animation: led 3.1s ease-in-out infinite; }
+      @media (prefers-reduced-motion: reduce) { .cur, .dev, .evl { animation: none } }
+    </style>
+    <pattern id="g7" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0V32M0 32H32" fill="none" stroke="#26282E" stroke-width=".6" opacity=".4"/>
+    </pattern>
+    <clipPath id="c7"><rect x="8" y="8" width="1264" height="452" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="1280" height="468" fill="#0A0A0B"/>
+  <g clip-path="url(#c7)">
+    <rect x="8" y="8" width="1264" height="452" fill="url(#g7)"/>
+    <rect x="9" y="180" width="1262" height="46" fill="#121316" opacity=".85"/>
+    <rect x="9" y="272" width="1262" height="46" fill="#121316" opacity=".85"/>
+    <rect x="9" y="364" width="1262" height="46" fill="#121316" opacity=".85"/>
+    <rect x="8" y="8" width="1264" height="44" fill="#121316"/>
+    <line x1="8" y1="52" x2="1272" y2="52" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="8" y="8" width="4" height="44" fill="#FF8700"/>
+    <text class="mono lbl" x="30" y="36" font-size="14" fill="#F5F5F7">06 · CURRENT SESSION</text>
+    <text class="mono lbl" x="1244" y="35" font-size="12" fill="#8A8F98" text-anchor="end">4 IN DEVELOPMENT · 2 IN EVALUATION</text>
+  </g>
+  <rect x="8" y="8" width="1264" height="452" rx="10" fill="none" stroke="#26282E" stroke-width="1.5"/>
+
+  <text class="mono" x="30" y="88" font-size="16" fill="#E10600">&gt;<tspan fill="#F5F5F7" dx="10">current_session --status</tspan><tspan class="cur" fill="#F5F5F7" dx="6">█</tspan></text>
+
+  <g class="mono lbl" font-size="11" fill="#8A8F98">
+    <text x="40" y="126">DEVELOPMENT AREA</text>
+    <text x="480" y="126">BASIS IN REPOSITORIES</text>
+    <text x="1000" y="126">STATE</text>
+  </g>
+  <line x1="30" y1="134" x2="1250" y2="134" stroke="#26282E" stroke-width="1.5"/>
+
+  <g class="mono">
+    <text class="area" x="40" y="168">Distributed AI systems</text>
+    <text class="basis" x="480" y="168">ref P1 · queue-decoupled inference</text>
+    <rect x="1000" y="151" width="196" height="24" rx="2" fill="#121316" stroke="#FF8700" stroke-width="1.2"/>
+    <circle class="dev" cx="1016" cy="163" r="4" fill="#FF8700"/>
+    <text class="chip" x="1030" y="167" fill="#FF8700">DEVELOPMENT</text>
+
+    <text class="area" x="40" y="214">Cloud-native processing</text>
+    <text class="basis" x="480" y="214">ref P1 · S3 · SQS · DynamoDB · Docker</text>
+    <rect x="1000" y="197" width="196" height="24" rx="2" fill="#121316" stroke="#FF8700" stroke-width="1.2"/>
+    <circle class="dev" cx="1016" cy="209" r="4" fill="#FF8700"/>
+    <text class="chip" x="1030" y="213" fill="#FF8700">DEVELOPMENT</text>
+
+    <text class="area" x="40" y="260">Computer vision</text>
+    <text class="basis" x="480" y="260">ref P2 · ViT · cGAN augmentation</text>
+    <rect x="1000" y="243" width="196" height="24" rx="2" fill="#121316" stroke="#FF8700" stroke-width="1.2"/>
+    <circle class="dev" cx="1016" cy="255" r="4" fill="#FF8700"/>
+    <text class="chip" x="1030" y="259" fill="#FF8700">DEVELOPMENT</text>
+
+    <text class="area" x="40" y="306">Transformer architectures</text>
+    <text class="basis" x="480" y="306">ref P3 · RoBERTa + DistilBERT ensemble</text>
+    <rect x="1000" y="289" width="196" height="24" rx="2" fill="#121316" stroke="#FF8700" stroke-width="1.2"/>
+    <circle class="dev" cx="1016" cy="301" r="4" fill="#FF8700"/>
+    <text class="chip" x="1030" y="305" fill="#FF8700">DEVELOPMENT</text>
+
+    <text class="area" x="40" y="352">Model explainability</text>
+    <text class="basis" x="480" y="352">ref TEST SESSIONS · SHAP · LIME</text>
+    <rect x="1000" y="335" width="196" height="24" rx="2" fill="#121316" stroke="#FFD100" stroke-width="1.2"/>
+    <circle class="evl" cx="1016" cy="347" r="4" fill="#FFD100"/>
+    <text class="chip" x="1030" y="351" fill="#FFD100">EVALUATION</text>
+
+    <text class="area" x="40" y="398">Local LLM inference</text>
+    <text class="basis" x="480" y="398">ref P1 · Ollama runtime</text>
+    <rect x="1000" y="381" width="196" height="24" rx="2" fill="#121316" stroke="#FFD100" stroke-width="1.2"/>
+    <circle class="evl" cx="1016" cy="393" r="4" fill="#FFD100"/>
+    <text class="chip" x="1030" y="397" fill="#FFD100">EVALUATION</text>
+  </g>
+
+  <line x1="30" y1="424" x2="1250" y2="424" stroke="#26282E" stroke-width="1.5"/>
+  <text class="mono lbl" x="30" y="446" font-size="11" fill="#8A8F98">DEVELOPMENT = ACTIVELY BUILDING · EVALUATION = EXPLORING, NOT CLAIMED AS EXPERTISE</text>
+</svg>

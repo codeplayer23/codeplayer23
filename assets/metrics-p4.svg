@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 388" width="1280" height="388" role="img" aria-label="Reported metrics for the CNN-LSTM-Attention emotion recognition model: accuracy 70 percent, precision 0.68, recall 0.70, F1 score 0.69. Training configuration: Adam optimiser at learning rate 0.001, 30 epochs, batch size 32, TensorFlow and Keras, 7 emotion classes, 48 by 48 greyscale input.">
+  <title>metrics --source README</title>
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .lbl  { letter-spacing: 2px; }
+      .k    { font-size: 12px; fill: #8A8F98; letter-spacing: 1.5px; }
+      .v    { font-size: 14px; fill: #F5F5F7; font-weight: 700; }
+
+      @keyframes blink { 0%, 48% { opacity: 1 } 49%, 100% { opacity: 0 } }
+      @keyframes m1 { 0% { stroke-dashoffset: 280 } 55%, 100% { stroke-dashoffset: 0 } }
+      @keyframes m2 { 0% { stroke-dashoffset: 272 } 55%, 100% { stroke-dashoffset: 0 } }
+      @keyframes m3 { 0% { stroke-dashoffset: 280 } 55%, 100% { stroke-dashoffset: 0 } }
+      @keyframes m4 { 0% { stroke-dashoffset: 276 } 55%, 100% { stroke-dashoffset: 0 } }
+      .cur { animation: blink 1.05s steps(1) infinite; }
+      .m1 { stroke-dasharray: 280; animation: m1 4.2s ease-out infinite; }
+      .m2 { stroke-dasharray: 272; animation: m2 4.2s ease-out infinite .12s; }
+      .m3 { stroke-dasharray: 280; animation: m3 4.2s ease-out infinite .24s; }
+      .m4 { stroke-dasharray: 276; animation: m4 4.2s ease-out infinite .36s; }
+      @media (prefers-reduced-motion: reduce) {
+        .cur { animation: none }
+        .m1, .m2, .m3, .m4 { animation: none; stroke-dashoffset: 0 }
+      }
+    </style>
+    <pattern id="g6" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0V32M0 32H32" fill="none" stroke="#26282E" stroke-width=".6" opacity=".4"/>
+    </pattern>
+    <clipPath id="c6"><rect x="8" y="8" width="1264" height="372" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="1280" height="388" fill="#0A0A0B"/>
+  <g clip-path="url(#c6)">
+    <rect x="8" y="8" width="1264" height="372" fill="url(#g6)"/>
+    <rect x="8" y="8" width="1264" height="44" fill="#121316"/>
+    <line x1="8" y1="52" x2="1272" y2="52" stroke="#26282E" stroke-width="1.5"/>
+    <rect x="8" y="8" width="4" height="44" fill="#E10600"/>
+    <text class="mono lbl" x="30" y="36" font-size="14" fill="#F5F5F7">P4 · CNN-LSTM-ATTENTION · REPORTED METRICS</text>
+    <text class="mono lbl" x="1244" y="35" font-size="12" fill="#8A8F98" text-anchor="end">7 CLASSES · 48×48×1</text>
+  </g>
+  <rect x="8" y="8" width="1264" height="372" rx="10" fill="none" stroke="#26282E" stroke-width="1.5"/>
+
+  <text class="mono" x="30" y="88" font-size="16" fill="#E10600">&gt;<tspan fill="#F5F5F7" dx="10">metrics --source README</tspan><tspan class="cur" fill="#F5F5F7" dx="6">█</tspan></text>
+
+  <!-- metric bars -->
+  <g class="mono k">
+    <text x="40" y="155">ACCURACY</text>
+    <text x="40" y="201">PRECISION</text>
+    <text x="40" y="247">RECALL</text>
+    <text x="40" y="293">F1 SCORE</text>
+  </g>
+
+  <g stroke-width="10">
+    <line x1="300" y1="150" x2="700" y2="150" stroke="#26282E"/>
+    <line class="m1" x1="300" y1="150" x2="580" y2="150" stroke="#E10600"/>
+    <line x1="300" y1="196" x2="700" y2="196" stroke="#26282E"/>
+    <line class="m2" x1="300" y1="196" x2="572" y2="196" stroke="#E10600"/>
+    <line x1="300" y1="242" x2="700" y2="242" stroke="#26282E"/>
+    <line class="m3" x1="300" y1="242" x2="580" y2="242" stroke="#E10600"/>
+    <line x1="300" y1="288" x2="700" y2="288" stroke="#26282E"/>
+    <line class="m4" x1="300" y1="288" x2="576" y2="288" stroke="#FF8700"/>
+  </g>
+
+  <g class="mono v">
+    <text x="720" y="155">0.70</text>
+    <text x="720" y="201">0.68</text>
+    <text x="720" y="247">0.70</text>
+    <text x="720" y="293">0.69</text>
+  </g>
+
+  <!-- scale ticks -->
+  <g stroke="#26282E" stroke-width="1">
+    <line x1="300" y1="308" x2="700" y2="308"/>
+    <line x1="300" y1="308" x2="300" y2="314"/>
+    <line x1="500" y1="308" x2="500" y2="314"/>
+    <line x1="700" y1="308" x2="700" y2="314"/>
+  </g>
+  <g class="mono" font-size="10" fill="#8A8F98" text-anchor="middle">
+    <text x="300" y="328">0.0</text>
+    <text x="500" y="328">0.5</text>
+    <text x="700" y="328">1.0</text>
+  </g>
+
+  <line x1="800" y1="120" x2="800" y2="320" stroke="#26282E" stroke-width="1.5"/>
+
+  <!-- training config -->
+  <text class="mono lbl" x="840" y="130" font-size="12" fill="#8A8F98">TRAINING CONFIGURATION</text>
+  <g class="mono k">
+    <text x="840" y="164">OPTIMISER</text>
+    <text x="840" y="192">LEARNING RATE</text>
+    <text x="840" y="220">EPOCHS</text>
+    <text x="840" y="248">BATCH SIZE</text>
+    <text x="840" y="276">FRAMEWORK</text>
+    <text x="840" y="304">ARCHITECTURE</text>
+  </g>
+  <g class="mono" font-size="13" fill="#F5F5F7">
+    <text x="1040" y="164">Adam</text>
+    <text x="1040" y="192">0.001</text>
+    <text x="1040" y="220">30</text>
+    <text x="1040" y="248">32</text>
+    <text x="1040" y="276">TensorFlow / Keras</text>
+    <text x="1040" y="304">3×Conv2D → LSTM → Attention</text>
+  </g>
+
+  <line x1="30" y1="348" x2="1250" y2="348" stroke="#26282E" stroke-width="1.5"/>
+  <text class="mono lbl" x="30" y="370" font-size="11" fill="#8A8F98">VALUES AS REPORTED IN PROJECT README · SELF-REPORTED, NOT INDEPENDENTLY BENCHMARKED</text>
+</svg>

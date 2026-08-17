@@ -22,6 +22,18 @@
   TO REMOVE:  delete the <image> element and the three overlay <rect>s in the
               bayClip group, then relabel "FEED LIVE" as "AWAITING IMAGE".
 
+  ── WHY ABSOLUTE raw.githubusercontent.com URLS ───────────────────────────────
+  Do NOT change these back to relative paths like assets/foo.svg.
+  A relative path is rendered by GitHub as a same-origin URL
+  (/codeplayer23/codeplayer23/raw/main/assets/foo.svg), which was returning 404
+  and left every panel showing alt text. Absolute raw.githubusercontent.com URLs
+  are treated as external, so GitHub serves them through its camo image proxy —
+  the same path already working for the streak and activity-graph cards.
+
+  NOTE: camo caches aggressively. After editing an SVG, if the old version
+  persists, append a version query to that image URL (…/foo.svg?v=2) to force
+  a fresh fetch.
+
   ── OPTIONAL: INTERACTIVE VERSION ─────────────────────────────────────────────
   A README cannot run JavaScript, so click/type interaction needs GitHub Pages
   (branch: gh-pages or /docs). When such a site exists, uncomment this line
@@ -30,9 +42,9 @@
   ══════════════════════════════════════════════════════════════════════════════
 -->
 
-![nitesh@pitwall — race engineer terminal session with a monochrome driver-feed avatar. Nitesh N, engineering, AI/ML systems, Amrita Vishwa Vidyapeetham, Bengaluru. Telemetry: 20 repositories, account since 2023, discipline AI/ML, session building.](assets/pitwall-terminal.svg?v=2)
+![nitesh@pitwall — race engineer terminal session with a monochrome driver-feed avatar. Nitesh N, engineering, AI/ML systems, Amrita Vishwa Vidyapeetham, Bengaluru. Telemetry: 20 repositories, account since 2023, discipline AI/ML, session building.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/pitwall-terminal.svg)
 
-![](assets/divider.svg?v=2)
+![](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/divider.svg)
 
 ### `> whoami`
 
@@ -43,23 +55,23 @@
 
 I build machine learning systems and the infrastructure that serves them — transformer NLP, computer vision models, and queue-decoupled inference pipelines running on containerised cloud services.
 
-![](assets/divider.svg?v=2)
+![](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/divider.svg)
 
 ### `> telemetry`
 
-![Telemetry panel. Public repositories 20. Account since 8 December 2023. Primary language Python. Discipline AI/ML and deep learning. Session status building. Repository classification: applied ML/DL 5, full stack 2, test sessions 12, infrastructure 1.](assets/telemetry-panel.svg?v=2)
+![Telemetry panel. Public repositories 20. Account since 8 December 2023. Primary language Python. Discipline AI/ML and deep learning. Session status building. Repository classification: applied ML/DL 5, full stack 2, test sessions 12, infrastructure 1.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/telemetry-panel.svg)
 
-![](assets/divider.svg?v=2)
+![](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/divider.svg)
 
 ### `> stack`
 
-![Engineering stack. Power unit: PyTorch, TensorFlow, Keras, Hugging Face Transformers, sentence-transformers. Aerodynamics: ViT, RoBERTa, DistilBERT, BART, CNN-LSTM-Attention, cGAN. Data systems: scikit-learn, XGBoost, CatBoost, SHAP, LIME, pandas, NumPy, NLTK, OpenCV, MediaPipe. Chassis: FastAPI, Uvicorn, Node.js, Express, MongoDB, Mongoose, JWT, bcrypt. Garage: AWS S3, DynamoDB, SQS, Docker, Docker Compose, Ollama. Cockpit: React, Vite, TailwindCSS, Recharts, Chart.js.](assets/stack-terminal.svg?v=2)
+![Engineering stack. Power unit: PyTorch, TensorFlow, Keras, Hugging Face Transformers, sentence-transformers. Aerodynamics: ViT, RoBERTa, DistilBERT, BART, CNN-LSTM-Attention, cGAN. Data systems: scikit-learn, XGBoost, CatBoost, SHAP, LIME, pandas, NumPy, NLTK, OpenCV, MediaPipe. Chassis: FastAPI, Uvicorn, Node.js, Express, MongoDB, Mongoose, JWT, bcrypt. Garage: AWS S3, DynamoDB, SQS, Docker, Docker Compose, Ollama. Cockpit: React, Vite, TailwindCSS, Recharts, Chart.js.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/stack-terminal.svg)
 
-![](assets/divider.svg?v=2)
+![](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/divider.svg)
 
 ### `> race_program`
 
-![Race program timing board. P1 cloud-native-text-engine, distributed AI and cloud, 2026.05, running. P2 face_emotion_recognition, computer vision and ViT, 2025.11, running. P3 Transformer_Ensemble, NLP and transformers, 2025.10, classified. P4 CNN-LSTM-Attention-for-emotion-recognition, computer vision, 2025.10, classified. P5 DistilBERT_sentiment_analysis, NLP, 2025.10, classified. P6 rugas-orm-demo, full stack, 2025.06, classified. Plus 12 coursework test sessions.](assets/race-program.svg?v=2)
+![Race program timing board. P1 cloud-native-text-engine, distributed AI and cloud, 2026.05, running. P2 face_emotion_recognition, computer vision and ViT, 2025.11, running. P3 Transformer_Ensemble, NLP and transformers, 2025.10, classified. P4 CNN-LSTM-Attention-for-emotion-recognition, computer vision, 2025.10, classified. P5 DistilBERT_sentiment_analysis, NLP, 2025.10, classified. P6 rugas-orm-demo, full stack, 2025.06, classified. Plus 12 coursework test sessions.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/race-program.svg)
 
 **ENTRY LINKS**
 
@@ -67,19 +79,19 @@ I build machine learning systems and the infrastructure that serves them — tra
 
 #### `> inspect P1`
 
-![Architecture of cloud-native-text-engine. A React 19 frontend calls a FastAPI backend with JWT auth. The backend uploads documents to AWS S3 and enqueues jobs on AWS SQS. A Python worker polls the queue, extracts text with PyPDF2, runs sentiment analysis, BART-large-CNN summarisation and MiniLM embeddings, then writes results to DynamoDB. An Ollama container serves a local LLM to the backend. Four services under Docker Compose in AWS region ap-south-1.](assets/architecture-p1.svg?v=2)
+![Architecture of cloud-native-text-engine. A React 19 frontend calls a FastAPI backend with JWT auth. The backend uploads documents to AWS S3 and enqueues jobs on AWS SQS. A Python worker polls the queue, extracts text with PyPDF2, runs sentiment analysis, BART-large-CNN summarisation and MiniLM embeddings, then writes results to DynamoDB. An Ollama container serves a local LLM to the backend. Four services under Docker Compose in AWS region ap-south-1.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/architecture-p1.svg)
 
 #### `> inspect P4 --metrics`
 
-![Reported metrics for the CNN-LSTM-Attention emotion recognition model: accuracy 0.70, precision 0.68, recall 0.70, F1 score 0.69. Trained with Adam at learning rate 0.001, 30 epochs, batch size 32, TensorFlow and Keras, 7 classes, 48x48 greyscale input.](assets/metrics-p4.svg?v=2)
+![Reported metrics for the CNN-LSTM-Attention emotion recognition model: accuracy 0.70, precision 0.68, recall 0.70, F1 score 0.69. Trained with Adam at learning rate 0.001, 30 epochs, batch size 32, TensorFlow and Keras, 7 classes, 48x48 greyscale input.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/metrics-p4.svg)
 
-![](assets/divider.svg?v=2)
+![](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/divider.svg)
 
 ### `> github_activity`
 
-![Sector timing header. Sector 1: language distribution, measured from source. Sector 2: contribution streak, live. Sector 3: commit activity trace, live.](assets/sector-header.svg?v=2)
+![Sector timing header. Sector 1: language distribution, measured from source. Sector 2: contribution streak, live. Sector 3: commit activity trace, live.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/sector-header.svg)
 
-![Sector 1, language distribution measured across 19 public repositories totalling 223,582 bytes of source: Python 54.7 percent, HTML 15.3 percent, JavaScript 15.1 percent, Jupyter Notebook 9.4 percent, PHP 3.8 percent, CSS 1.6 percent, Dockerfile 0.2 percent.](assets/language-mix.svg?v=2)
+![Sector 1, language distribution measured across 19 public repositories totalling 223,582 bytes of source: Python 54.7 percent, HTML 15.3 percent, JavaScript 15.1 percent, Jupyter Notebook 9.4 percent, PHP 3.8 percent, CSS 1.6 percent, Dockerfile 0.2 percent.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/language-mix.svg)
 
 ![SECTOR 2 — contribution streak for codeplayer23, rendered live from the GitHub API](https://streak-stats.demolab.com/?user=codeplayer23&hide_border=true&border_radius=10&background=0A0A0B&border=26282E&stroke=26282E&ring=E10600&fire=FF8700&currStreakNum=F5F5F7&sideNums=F5F5F7&currStreakLabel=FF8700&sideLabels=8A8F98&dates=8A8F98)
 
@@ -89,19 +101,19 @@ I build machine learning systems and the infrastructure that serves them — tra
 > drawn live by external services — if either feed is unavailable, every other panel on this
 > profile still stands on its own.
 
-![](assets/divider.svg?v=2)
+![](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/divider.svg)
 
 ### `> current_session`
 
-![Current session. In development: distributed AI systems, cloud-native processing, computer vision, transformer architectures. Under evaluation: model explainability, local LLM inference. Development means actively building; evaluation means exploring, not claimed as expertise.](assets/current-session.svg?v=2)
+![Current session. In development: distributed AI systems, cloud-native processing, computer vision, transformer architectures. Under evaluation: model explainability, local LLM inference. Development means actively building; evaluation means exploring, not claimed as expertise.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/current-session.svg)
 
-![](assets/divider.svg?v=2)
+![](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/divider.svg)
 
 ### `> radio --open`
 
-![Radio channel panel. Open to contributions, internships and collaborations. All repositories are public; issues and pull requests welcome. Channel GitHub, codeplayer23, open. No other channels provisioned.](assets/radio.svg?v=2)
+![Radio channel panel. Open to contributions, internships and collaborations. All repositories are public; issues and pull requests welcome. Channel GitHub, codeplayer23, open. No other channels provisioned.](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/radio.svg)
 
-![](assets/chequered-rule.svg?v=2)
+![](https://raw.githubusercontent.com/codeplayer23/codeplayer23/main/assets/chequered-rule.svg)
 
 <!--
   SESSION END · panels are static SVG + live GitHub API feeds · no tracking, no JavaScript
